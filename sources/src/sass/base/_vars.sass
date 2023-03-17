@@ -1,0 +1,50 @@
+:root
+   //colors
+   --bodyBg: #1D1D1D
+   --accent: #E3B748
+   --hoverColor: #E2BE68
+
+   //sizes
+   --mainPadding: 30px
+   --mainMargin: 100px
+
+   //other
+   --transition: all .2s ease
+
+%box
+   padding: 36px 26px 38px
+   background: #1D1D1D
+   border: 1px solid rgba(255, 255, 255, 0.1)
+   border-radius: 14px
+
+%hoverLink
+   position: relative
+   &::after
+      content: ""
+      position: absolute
+      left: auto
+      right: 0
+      bottom: 0
+      width: 0
+      height: 1px
+      background: #fff
+      transition: var(--transition)
+   &:hover,
+   &:focus
+      &::after
+         right: auto
+         left: 0
+         width: 100%
+
+// Grid
+$width_lg: 1200px
+$width_md: 900px
+$width_xs: 767px
+$width_mob: 500px
+$width_sm: 400px
+
+@media screen and (max-width: $width_xs)
+   :root
+      //sizes
+      --mainPadding: 20px
+      --mainMargin: 100px

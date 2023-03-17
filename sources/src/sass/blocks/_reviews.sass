@@ -1,0 +1,105 @@
+.reviews
+   margin-bottom: 186px
+   &__top
+      margin-bottom: 104px
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+   .title
+      text-align: left
+      line-height: 143%
+   &__slider
+      overflow: hidden
+      position: relative
+   &__pagination
+      display: none
+   &__manage
+      display: flex
+      align-items: center
+      position: relative
+      button
+         position: static
+         margin-left: 19px
+   &__item
+      @extend %box
+      position: relative
+      opacity: 0
+      transform: translateX(100px) translateY(100px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateX(0) translateY(0)
+      &:nth-child(3n-1)
+         background: #2E2E2E
+         .reviews__num
+            display: none
+   &__num
+      width: 63px
+      position: absolute
+      top: 28px
+      right: 40px
+   &__pic
+      margin-bottom: 20px
+      img
+         border-radius: 50%
+   &__person
+      margin-bottom: 22px
+   &__name
+      margin-bottom: 10px
+   &__pro
+      font-weight: 400
+      font-size: 14px
+      line-height: 170%
+   &__text
+      font-weight: 500
+      font-size: 14px
+      line-height: 163%
+      color: rgba(#fff, 0.3)
+   &__prev
+      opacity: 0
+      transform: translateX(-10px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateX(0)
+   &__next
+      opacity: 0
+      transform: translateX(10px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateX(0)
+
+@media screen and (max-width: $width_lg)
+   .reviews
+      margin-bottom: var(--mainMargin)
+      &__top
+         margin-bottom: 70px
+
+@media screen and (max-width: $width_md)
+   .reviews
+      &__item
+         &:nth-child(3n-1)
+            background: transparent
+            .reviews__num
+               display: block
+         &:nth-child(2n)
+            background: #2E2E2E
+            .reviews__num
+               display: none
+      &__slider
+         padding-bottom: 40px
+      &__pagination
+         display: block
+
+@media screen and (max-width: $width_xs)
+   .reviews
+      &__top
+         flex-direction: column
+         align-items: flex-start
+         .title
+            margin-bottom: 20px
+            br
+               display: none
+      &__manage
+         margin-left: auto

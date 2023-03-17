@@ -1,0 +1,77 @@
+.faq
+   margin-bottom: 188px
+   .title
+      margin-bottom: 14px
+      text-align: left
+   &__box
+      display: flex
+   &__info, &__content
+      width: 50%
+   &__info
+      padding-right: 120px
+      opacity: 0
+      transform: translateY(70px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateY(0)
+   &__item
+      padding: 40px 0
+      border-bottom: 2px solid rgba(#D9D9D9, 0.05)
+      opacity: 0
+      transform: translateY(70px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateY(0)
+      &:first-child
+         padding-top: 0
+      &:last-child
+         border-bottom: 0
+   &__manage
+      display: flex
+      justify-content: space-between
+      cursor: pointer
+      &--active
+         .faq
+            &__toggle
+               transform: scale(0)
+   &__question
+      padding-right: 10px
+   &__answer
+      display: none
+   &__toggle
+      display: inline-block
+      width: 28px
+      height: 28px
+      background: var(--accent)
+      border-radius: 50%
+      position: relative
+      transition: var(--transition)
+      &::after
+         content: '+'
+         font-weight: 600
+         font-size: 18px
+         line-height: 22px
+         color: #000
+   &__text
+      padding-top: 40px
+
+@media screen and (max-width: $width_lg)
+   .faq
+      margin-bottom: var(--mainMargin)
+
+@media screen and (max-width: $width_md)
+   .faq
+      &__box
+         flex-wrap: wrap
+      &__info, &__content
+         width: 100%
+         padding-right: 0
+      &__info
+         margin-bottom: 40px
+      &__item
+         padding: 30px 0
+         &:first-child
+            border-top: 2px solid rgba(217,217,217,.05)
+            padding-top: 30px

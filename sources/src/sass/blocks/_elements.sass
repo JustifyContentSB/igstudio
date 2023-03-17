@@ -1,0 +1,128 @@
+.container
+   width: 100%
+   max-width: 1200px
+   padding: 0 var(--mainPadding)
+   margin: 0 auto
+
+.logo
+   display: inline-block
+   width: 143px
+   img
+      display: block
+      width: 100%
+
+.text
+   color: rgba(#fff, 0.3)
+   font-weight: 500
+   font-size: 18px
+   line-height: 163%
+
+.btn
+   padding: 10px 24px
+   display: inline-block
+   background: var(--accent)
+   color: #000
+   border-radius: 24px
+   text-align: center
+   font-size: 14px
+   line-height: 163%
+   font-weight: 600
+   cursor: pointer
+   transition: var(--transition)
+   &:hover,
+   &:focus
+      background: var(--hoverColor)
+
+.email-form
+   &__box
+      width: 438px
+      position: relative
+   &__field
+      position: relative
+   &__icon
+      position: absolute
+      width: 22px
+      height: 22px
+      left: 28px
+      top: 0
+      bottom: 0
+      margin: auto
+      opacity: 0.1
+      transition: var(--transition)
+   &__inp
+      width: 100%
+      padding: 24px 62px
+      padding-right: 180px
+      background: rgba(#fff, 0.1)
+      border-radius: 43px
+      font-weight: 500
+      font-size: 16px
+      line-height: 162.52%
+      color: #fff
+      border: none
+      &:focus
+         & ~ .email-form__icon
+            opacity: 1
+   .btn
+      padding: 18px 32px
+      position: absolute
+      right: 6px
+      top: 6px
+      bottom: 6px
+      border-radius: 43px
+      font-size: 16px
+
+.title
+   font-weight: 600
+   font-size: 54px
+   line-height: 162%
+   text-align: center
+   &.anim-item
+      opacity: 0
+      transform: translateY(40px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateY(0)
+
+.sec-title
+   font-weight: 600
+   font-size: 24px
+   line-height: 120%
+
+@media screen and (max-width: $width_lg)
+   .title
+      font-size: 48px
+   .sec-title
+      font-size: 22px
+      line-height: 140%
+   .text
+      font-size: 16px
+
+@media screen and (max-width: $width_md)
+   .title
+      font-size: 44px
+   .sec-title
+      font-size: 20px
+
+@media screen and (max-width: $width_xs)
+   .title
+      font-size: 40px
+   .sec-title
+      font-size: 18px
+
+@media screen and (max-width: $width_mob)
+   .title
+      font-size: 36px
+   .email-form
+      &__field
+         margin-bottom: 10px
+      &__inp
+         padding: 20px 62px
+      .btn
+         width: 100%
+         position: static
+
+@media screen and (max-width: $width_sm)
+   .title
+      font-size: 32px

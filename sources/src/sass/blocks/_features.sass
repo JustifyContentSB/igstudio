@@ -1,0 +1,67 @@
+.features
+   margin-bottom: 179px
+   &__title
+      margin-bottom: 97px
+   &__slider
+      overflow: hidden
+      position: relative
+   &__list
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 31px
+   &__item
+      padding: 28px 24px 36px
+      border: 1px solid rgba(255, 255, 255, 0.1)
+      border-radius: 14px
+      transition: var(--transition)
+      opacity: 0
+      transform: translateX(-40px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateX(0)
+      &:hover,
+      &:focus
+         background: #2E2E2E
+      &:nth-child(3n-1)
+         background: #2E2E2E
+   &__icon
+      width: 101px
+      height: 101px
+      margin-bottom: 28px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      background: #fff
+      border: 1px solid rgba(25, 25, 25, 0.1)
+   &__name
+      margin-bottom: 26px
+   .text
+      margin-bottom: 22px
+      font-size: 14px
+   &__pagination
+      display: none
+
+@media screen and (max-width: $width_lg)
+   .features
+      margin-bottom: var(--mainMargin)
+      &__title
+         margin-bottom: 60px
+
+@media screen and (max-width: $width_md)
+   .features
+      &__list
+         display: flex
+         grid-gap: 0
+      &__info
+         max-width: 500px
+      &__icon
+         width: 80px
+         height: 80px
+         img
+            width: 50px
+      &__slider
+         padding-bottom: 40px
+      &__pagination
+         display: block

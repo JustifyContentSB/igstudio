@@ -1,0 +1,311 @@
+extends base/_layout
+block head
+   title Igstudio
+block page
+   main.main
+
+      section.introduce
+         .introduce__inner.container
+            .introduce__left.anim-item
+               h2.introduce__title.title Let’s Introduce Ourself
+            .introduce__right.anim-item
+               .introduce__info
+                  h3.introduce__name Criminal Lawyer
+                  p.text.
+                     Amet minim mollit non deserunt ullamco est
+                     sit aliqua dolor do amet sint. Velit officia consequatduis
+                     enim velit mollit Exercitation.
+
+      section.features
+         .features__inner.container
+            h2.features__title.title.anim-item Why Choose us?
+            .features__slider
+               .features__list.swiper-wrapper
+                  .features__item.swiper-slide.anim-item
+                     .features__icon
+                        img(src="images/icons/features.svg" alt="icon" width="62" height="62")
+                     .features__info
+                        h3.features__name.sec-title 98% Success Rate
+                        p.text.
+                           Amet minim mollit non deserunt ullamco est
+                           sit aliqua dolor do amet sint. Velit officia
+                           consequatduis enim velit mollit Exer.
+                        a.btn(href="#") Read More
+                  .features__item.swiper-slide.anim-item
+                     .features__icon
+                        img(src="images/icons/features.svg" alt="icon" width="62" height="62")
+                     .features__info
+                        h3.features__name.sec-title 100% Success Rate
+                        p.text.
+                           Amet minim mollit non deserunt ullamco est
+                           sit aliqua dolor do amet sint. Velit officia
+                           consequatduis enim velit mollit Exer.
+                        a.btn(href="#") Read More
+                  .features__item.swiper-slide.anim-item
+                     .features__icon
+                        img(src="images/icons/features.svg" alt="icon" width="62" height="62")
+                     .features__info
+                        h3.features__name.sec-title 100% Success Rate
+                        p.text.
+                           Amet minim mollit non deserunt ullamco est
+                           sit aliqua dolor do amet sint. Velit officia
+                           consequatduis enim velit mollit Exer.
+                        a.btn(href="#") Read More
+
+               .features__pagination.swiper-pagination
+
+      section.area
+         .area__inner.container
+            h2.area__title.title.anim-item Area of Practices
+            ul.area__list
+               li.area__item.anim-item.area__item--large
+                  a.area__box(href="#")
+                     .background-image
+                        picture
+                           source(srcset="images/area/area-1-mob.webp" media="(max-width: 768px)" type="image/webp")
+                           source(srcset="images/area/area-1-mob.jpg" media="(max-width: 768px)" type="image/png")
+                           source(srcset="images/area/area-1.webp" type="image/webp")
+                           img(src="images/area/area-1.png" alt="area img" width="752" height="342")
+                     h3.area__name.sec-title BUSINESS LAW
+               li.area__item.anim-item
+                  a.area__box(href="#")
+                     .background-image
+                        picture
+                           source(srcset="images/area/area-2.webp" type="image/webp")
+                           img(src="images/area/area-2.png" alt="area img" width="358" height="342")
+                     h3.area__name.sec-title Partnership LAW
+               li.area__item.anim-item
+                  a.area__box(href="#")
+                     .background-image
+                        picture
+                           source(srcset="images/area/area-3.webp" type="image/webp")
+                           img(src="images/area/area-3.png" alt="area img" width="358" height="342")
+                     h3.area__name.sec-title REAL ESTATE LAW
+               li.area__item.anim-item.area__item--large
+                  a.area__box(href="#")
+                     .background-image
+                        picture
+                           source(srcset="images/area/area-4-mob.webp" media="(max-width: 768px)" type="image/webp")
+                           source(srcset="images/area/area-4-mob.jpg" media="(max-width: 768px)" type="image/png")
+                           source(srcset="images/area/area-4.webp" type="image/webp")
+                           img(src="images/area/area-4.png" alt="area img" width="752" height="342")
+                     h3.area__name.sec-title BUSINESS LAW
+               li.area__item.anim-item.area__item--large
+                  a.area__box(href="#")
+                     .background-image
+                        picture
+                           source(srcset="images/area/area-5-mob.webp" media="(max-width: 768px)" type="image/webp")
+                           source(srcset="images/area/area-5-mob.jpg" media="(max-width: 768px)" type="image/png")
+                           source(srcset="images/area/area-5.webp" type="image/webp")
+                           img(src="images/area/area-5.png" alt="area img" width="752" height="342")
+                     h3.area__name.sec-title LANDLORD DISPUTES
+               li.area__item.anim-item
+                  a.area__box(href="#")
+                     .background-image
+                        picture
+                           source(srcset="images/area/area-6.webp" type="image/webp")
+                           img(src="images/area/area-6.png" alt="area img" width="358" height="342")
+                     h3.area__name.sec-title ELDER ABUSE
+
+      section.reviews
+         .reviews__inner.container
+            .reviews__top
+               h2.title.anim-item What says our #[br] happy Clients
+               .reviews__manage
+                  button.swiper-button-prev.reviews__prev.anim-item
+                  button.swiper-button-next.reviews__next.anim-item
+            .reviews__list
+               .reviews__slider
+                  .swiper-wrapper
+                     .reviews__item.swiper-slide.anim-item
+                        .reviews__num
+                           img(src="images/icons/99.svg", alt="99" width="63" height="46")
+                        .reviews__info
+                           .reviews__pic
+                              img(src="images/reviews/reviews-1.png", alt="Jane Cooper" width="105" height="102")
+                           .reviews__person
+                              p.reviews__name.sec-title Jane Cooper
+                              p.reviews__pro Ceo of Hunt
+                           p.reviews__text.
+                              Amet minim mollit non deserunt ullamco est
+                              sit aliqua dolor do amet sint. Velit officia
+                              consequatduis enim velit mollit Exer. sit
+                              aliqua dolor do amet sint. Velit officia
+                     .reviews__item.swiper-slide.anim-item
+                        .reviews__num
+                           img(src="images/icons/99.svg", alt="99" width="63" height="46")
+                        .reviews__info
+                           .reviews__pic
+                              img(src="images/reviews/reviews-2.png", alt="Devon Lane" width="105" height="102")
+                           .reviews__person
+                              p.reviews__name.sec-title Devon Lane
+                              p.reviews__pro Ceo of Hunt
+                           p.reviews__text.
+                              Amet minim mollit non deserunt ullamco est
+                              sit aliqua dolor do amet sint. Velit officia
+                              consequatduis enim velit mollit Exer. sit
+                              aliqua dolor do amet sint. Velit officia
+                     .reviews__item.swiper-slide.anim-item
+                        .reviews__num
+                           img(src="images/icons/99.svg", alt="99" width="63" height="46")
+                        .reviews__info
+                           .reviews__pic
+                              img(src="images/reviews/reviews-3.png", alt="Robert Fox" width="105" height="102")
+                           .reviews__person
+                              p.reviews__name.sec-title Robert Fox
+                              p.reviews__pro Ceo of Hunt
+                           p.reviews__text.
+                              Amet minim mollit non deserunt ullamco est
+                              sit aliqua dolor do amet sint. Velit officia
+                              consequatduis enim velit mollit Exer. sit
+                              aliqua dolor do amet sint. Velit officia
+                     .reviews__item.swiper-slide.anim-item
+                        .reviews__num
+                           img(src="images/icons/99.svg", alt="99" width="63" height="46")
+                        .reviews__info
+                           .reviews__pic
+                              img(src="images/reviews/reviews-1.png", alt="Jane Cooper" width="105" height="102")
+                           .reviews__person
+                              p.reviews__name.sec-title Jane Cooper
+                              p.reviews__pro Ceo of Hunt
+                           p.reviews__text.
+                              Amet minim mollit non deserunt ullamco est
+                              sit aliqua dolor do amet sint. Velit officia
+                              consequatduis enim velit mollit Exer. sit
+                              aliqua dolor do amet sint. Velit officia
+                     .reviews__item.swiper-slide.anim-item
+                        .reviews__num
+                           img(src="images/icons/99.svg", alt="99" width="63" height="46")
+                        .reviews__info
+                           .reviews__pic
+                              img(src="images/reviews/reviews-2.png", alt="Devon Lane" width="105" height="102")
+                           .reviews__person
+                              p.reviews__name.sec-title Devon Lane
+                              p.reviews__pro Ceo of Hunt
+                           p.reviews__text.
+                              Amet minim mollit non deserunt ullamco est
+                              sit aliqua dolor do amet sint. Velit officia
+                              consequatduis enim velit mollit Exer. sit
+                              aliqua dolor do amet sint. Velit officia
+                     .reviews__item.swiper-slide.anim-item
+                        .reviews__num
+                           img(src="images/icons/99.svg", alt="99" width="63" height="46")
+                        .reviews__info
+                           .reviews__pic
+                              img(src="images/reviews/reviews-3.png", alt="Robert Fox" width="105" height="102")
+                           .reviews__person
+                              p.reviews__name.sec-title Robert Fox
+                              p.reviews__pro Ceo of Hunt
+                           p.reviews__text.
+                              Amet minim mollit non deserunt ullamco est
+                              sit aliqua dolor do amet sint. Velit officia
+                              consequatduis enim velit mollit Exer. sit
+                              aliqua dolor do amet sint. Velit officia
+
+                  .swiper-pagination.reviews__pagination
+                  
+      section.team
+         .team__inner.container
+            h2.team__title.title.anim-item Our Team
+            .team__slider
+               .team__list.swiper-wrapper
+                  .team__item.swiper-slide.anim-item
+                     .team__photo
+                        img(src="images/team/team-1.png", alt="Danial Def")
+                     .team__info
+                        p.team__name.sec-title Danial Def
+                        p.team__pro 301 Cases
+                  .team__item.swiper-slide.anim-item
+                     .team__photo
+                        img(src="images/team/team-2.png", alt="Sanfole")
+                     .team__info
+                        p.team__name.sec-title Sanfole
+                        p.team__pro 850 Cases
+                  .team__item.swiper-slide.anim-item
+                     .team__photo
+                        img(src="images/team/team-3.png", alt="Cesforila")
+                     .team__info
+                        p.team__name.sec-title Cesforila
+                        p.team__pro 470 Cases
+                  .team__item.swiper-slide.anim-item
+                     .team__photo
+                        img(src="images/team/team-4.png", alt="Colleen")
+                     .team__info
+                        p.team__name.sec-title Colleen
+                        p.team__pro 180 Cases
+                  .team__item.swiper-slide.anim-item
+                     .team__photo
+                        img(src="images/team/team-5.png", alt="Haldone")
+                     .team__info
+                        p.team__name.sec-title Haldone
+                        p.team__pro 212 Cases
+                  .team__item.swiper-slide.anim-item
+                     .team__photo
+                        img(src="images/team/team-6.png", alt="Nik Jeo")
+                     .team__info
+                        p.team__name.sec-title Nik Jeo
+                        p.team__pro 350 Cases
+               .team__pagination.swiper-pagination
+
+      section.faq
+         .faq__inner.container
+            h2.title.anim-item FAQ
+            .faq__box
+               .faq__info.anim-item
+                  p.text.
+                     Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+               .faq__content
+                  ul.faq__list
+                     li.faq__item.anim-item
+                        .faq__manage.faq__manage--active
+                           p.faq__question.sec-title Do I need a personal injury report?
+                           button.faq__toggle
+                              span.visually-hidden read the answer
+                        .faq__answer
+                           p.faq__text.text.
+                              Amet minim mollit non deserunt ullamco est sit
+                              aliqua dolor do amet sint. Velit officia consequatduis
+                              enim velit mollit Exer. Amet minim mollit non deserunt
+                              ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer.
+                     li.faq__item.anim-item
+                        .faq__manage
+                           p.faq__question.sec-title How much is my case worth?
+                           button.faq__toggle
+                              span.visually-hidden read the answer
+                        .faq__answer
+                           p.faq__text.text.
+                              Amet minim mollit non deserunt ullamco est sit
+                              aliqua dolor do amet sint. Velit officia consequatduis
+                              enim velit mollit Exer. Amet minim mollit non deserunt
+                              ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer.
+                     li.faq__item.anim-item
+                        .faq__manage
+                           p.faq__question.sec-title What should I do right after car accidect
+                           button.faq__toggle
+                              span.visually-hidden read the answer
+                        .faq__answer
+                           p.faq__text.text.
+                              Amet minim mollit non deserunt ullamco est sit
+                              aliqua dolor do amet sint. Velit officia consequatduis
+                              enim velit mollit Exer. Amet minim mollit non deserunt
+                              ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer.
+                     li.faq__item.anim-item
+                        .faq__manage
+                           p.faq__question.sec-title How much is my case worth?
+                           button.faq__toggle
+                              span.visually-hidden read the answer
+                        .faq__answer
+                           p.faq__text.text.
+                              Amet minim mollit non deserunt ullamco est sit
+                              aliqua dolor do amet sint. Velit officia consequatduis
+                              enim velit mollit Exer. Amet minim mollit non deserunt
+                              ullamco est sit aliqua dolor do amet sint. Velit officia consequatduis enim velit mollit Exer.
+
+      section.subscribe
+         .subscribe__inner.container
+            h2.subscribe__title.title.anim-item Subscribe Our Newsletter
+            form.form.anim-item(action="#")
+               .form__inner
+                  input.form__field(type="text" placeholder="Name :")
+                  input.form__field(type="email" placeholder="Enter your Email")
+                  button.form__btn SEND

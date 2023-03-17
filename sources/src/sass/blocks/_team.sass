@@ -1,0 +1,79 @@
+.team
+   margin-bottom: 144px
+   &__title
+      margin-bottom: 109px
+   &__list
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 62px
+   &__photo
+      width: 68px
+      height: 68px
+      margin-right: 22px
+      img
+         width: 100%
+         display: block
+         border-radius: 50%
+   &__name
+      margin-bottom: 6px
+      transition: var(--transition)
+   &__pro
+      font-weight: 400
+      font-size: 14px
+      line-height: 171%
+      color: rgba(#fff, 0.3)
+      transition: var(--transition)
+   &__item
+      padding: 16px 26px 23px
+      border-radius: 14px
+      display: flex
+      align-items: center
+      transition: var(--transition)
+      opacity: 0
+      transform: translateX(-40px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateX(0)
+      &:hover,
+      &:focus
+         background: var(--accent)
+         .team
+            &__name
+               color: #373737
+            &__pro
+               color: rgba(#000, 0.4)
+   &__pagination
+      display: none
+
+@media screen and (max-width: $width_lg)
+   .team
+      margin-bottom: var(--mainMargin)
+      &__list
+         grid-gap: 30px
+      &__title
+         margin-bottom: 70px
+
+@media screen and (max-width: $width_xs)
+   .team
+      &__list
+         grid-template-columns: 1fr 1fr
+         grid-gap: 20px
+      &__item
+         padding: 16px
+         
+@media screen and (max-width: $width_mob)
+   .team
+      &__title
+         margin-bottom: 40px
+      &__slider
+         padding-bottom: 40px
+         position: relative
+         overflow: hidden
+      &__pagination
+         display: block
+      &__list
+         display: flex
+         grid-gap: 0
+      &__item
+         border: 1px solid rgba(255,255,255,.1)

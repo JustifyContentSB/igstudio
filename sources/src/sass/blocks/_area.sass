@@ -1,0 +1,63 @@
+.area
+   margin-bottom: 180px
+   &__title
+      margin-bottom: 54px
+   &__list
+      display: flex
+      flex-wrap: wrap
+      grid-gap: 30px
+   &__item
+      width: 358px
+      height: 342px
+      border-radius: 14px
+      overflow: hidden
+      opacity: 0
+      transform: scale(0.7)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: scale(1)
+      &--large
+         width: 752px
+   &__box
+      display: block
+      width: 100%
+      height: 100%
+      position: relative
+      &::after
+         content: ''
+         position: absolute
+         left: 0
+         top: 0
+         bottom: 0
+         right: 0
+   &__name
+      padding: 0 10px
+      text-align: center
+      text-transform: uppercase
+      position: absolute
+      bottom: 27px
+      left: 0
+      right: 0
+      z-index: 5
+
+@media screen and (max-width: $width_lg)
+   .area
+      margin-bottom: var(--mainMargin)
+      &__item
+         width: calc(50% - 15px)
+
+@media screen and (max-width: $width_md)
+   .area
+      &__list
+         grid-template-columns: 1fr 1fr
+
+@media screen and (max-width: $width_xs)
+   .area
+      &__item
+         height: 300px
+
+@media screen and (max-width: 550px)
+   .area
+      &__item
+         width: 100%

@@ -1,0 +1,48 @@
+.introduce
+   margin-bottom: 170px
+   &__inner
+      display: grid
+      grid-template-columns: 1fr 1fr
+   &__left
+      padding-right: 87px
+      border-right: 1px solid #6A6A6A
+      opacity: 0
+      transform: translateY(40px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateY(0)
+   &__right
+      height: auto
+      padding-left: 87px
+      opacity: 0
+      transform: translateY(40px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateY(0)
+   &__left, &__right
+      display: flex
+      flex-direction: column
+      justify-content: center
+   .title
+      text-align: left
+   &__name
+      margin-bottom: 16px
+      font-weight: 600
+      font-size: 32px
+      line-height: 163%
+
+@media screen and (max-width: $width_lg)
+   .introduce
+      margin-bottom: var(--mainMargin)
+      &__inner
+         grid-template-columns: 1fr
+      &__left
+         margin-bottom: 20px
+         padding-bottom: 10px
+         padding-right: 0
+         border-right: 0
+         border-bottom: 1px solid #6A6A6A
+      &__right
+         padding-left: 0

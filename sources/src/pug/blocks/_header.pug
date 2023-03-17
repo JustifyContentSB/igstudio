@@ -1,0 +1,33 @@
+header.header
+   .header__inner
+      .header__top
+         .header__top-inner.container
+            a.header__logo.logo(href="#")
+               img(src="images/icons/logo.svg", alt="logo" width="143" height="31")
+            .header__menu
+               a.header__burger(href="#")
+                  span
+               nav.header__nav.nav
+                  ul.nav__list
+                     li.nav__item
+                        a(href="#") Home
+                     li.nav__item
+                        a(href="#") Attorneys
+                     li.nav__item
+                        a(href="#") Practice Areas
+                     li.nav__item
+                        a(href="#") About Us
+            a.header__tel(href="tel:+7999999999") Contact Now #[img.header__tel-icon(src="images/icons/tel.svg" width="30" alt="icon")]
+      .header__content.container
+         .header__info.anim-item
+            h1.header__title You don’t have to #[span Fight them Alone.]
+            p.header__text.text.
+               Lorem ipsum dolor sit amet consectetur adipiscing elit blandit, curabitur sodales conubia ut inceptos faucibus himenaeos tortor eget, hac massa gravida arcu interdum proin curae.
+            form.email-form(action="#")
+               .email-form__box
+                  .email-form__field
+                     input.email-form__inp(type="text" placeholder="Enter your email address")
+                     img.email-form__icon(src="images/icons/message.svg", alt="icon" width="22" height="22")
+                  button.btn Let’s Talk
+         .header__img.anim-item
+            img.header__img-person(src="images/header/person.png", alt="man" width="444" height="569")

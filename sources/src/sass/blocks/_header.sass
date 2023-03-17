@@ -1,0 +1,237 @@
+.header
+   padding-top: 230px
+   margin-bottom: 172px
+   padding-bottom: 192px
+   background: #111111
+   &__top
+      margin-bottom: 80px
+      padding-top: 30px
+      padding-bottom: 30px
+      background: #111111
+      z-index: 1000
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      &-inner
+         display: flex
+         align-items: center
+         justify-content: space-between
+   &__tel
+      padding: 14px 35px
+      font-weight: 600
+      font-size: 16px
+      text-align: center
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      border: 2px solid #fff
+      transition: var(--transition)
+      position: relative
+      z-index: 105
+      &-icon
+         display: none
+      &:hover,
+      &:focus
+         background: #fff
+         color: #000
+   &__content
+      display: flex
+      align-items: center
+   &__info
+      width: calc(100% - 468px)
+      padding-right: 92px
+      opacity: 0
+      transform: translateX(-40px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateX(0)
+   &__title
+      margin-bottom: 36px
+      font-weight: 500
+      font-size: 66px
+      line-height: 148%
+      span
+         font-weight: 700
+   &__text
+      margin-bottom: 48px
+   &__img
+      width: 468px
+      height: 468px
+      margin-top: 20px
+      border-radius: 55px
+      background: var(--accent)
+      position: relative
+      background: url('../images/header/pattern.png') no-repeat center / contain
+      opacity: 0
+      transform: translateX(40px)
+      transition: all .6s ease-out
+      &.visible
+         opacity: 1
+         transform: translateX(0)
+      &-person
+         width: 444px
+         max-width: none
+         position: absolute
+         bottom: -20px
+   &__menu
+      margin-left: 30px
+   &__logo
+      position: relative
+      z-index: 105
+
+@media screen and (max-width: 1600px)
+   .header
+      &__top
+         padding: 30px 0
+
+@media screen and (max-width: $width_lg)
+   .header
+      padding-top: 180px
+      margin-bottom: var(--mainMargin)
+      &__menu
+         margin-left: 0
+      &__top
+         padding: 20px 0
+         &-inner
+            position: relative
+      &__menu
+         order: -1
+      &__burger
+         width: 50px
+         height: 50px
+         padding: 10px
+         display: flex
+         position: relative
+         z-index: 110
+         justify-content: center
+         align-items: center
+         span
+            display: block
+            width: 100%
+            height: 2px
+            background: #fff
+            transition: all .4s ease
+            position: relative
+            &::before, &::after
+               content: ''
+               position: absolute
+               z-index: 1
+               top: -10px
+               width: 100%
+               height: 2px
+               background: inherit
+            &::after
+               top: auto
+               bottom: -10px
+         &--active
+            span
+               transform: rotate(135deg)
+               &::before, &::after
+                  transform: rotate(90deg)
+               &::before
+                  top: 0
+               &::after
+                  bottom: 0
+      &__nav
+         position: fixed
+         top: 0
+         bottom: 0
+         left: 0
+         right: 0
+         z-index: 100
+         background: rgba(#000, 0.7)
+         display: flex
+         align-items: center
+         justify-content: center
+         transition: all .4s ease
+         border-radius: 50%
+         transform: scale(0)
+         &--active
+            transform: scale(1)
+            border-radius: 0
+         .nav
+            &__list
+               flex-direction: column
+               font-size: 24px
+            &__item
+               margin-right: 0
+               margin-bottom: 20px
+      &__logo
+         position: absolute
+         left: 50%
+         transform: translateX(-50%)
+      &__title
+         font-size: 56px
+      &__info
+         width: calc(100% - 400px)
+      &__img
+         width: 400px
+         height: 400px
+         &-person
+            width: 380px
+            left: 50%
+            transform: translateX(-50%)
+
+@media screen and (max-width: 1000px)
+   .header
+      padding-bottom: 100px
+      &__content
+         flex-direction: column
+         align-items: flex-start
+      &__info
+         width: 100%
+         padding-right: 0
+         transform: translateY(40px)
+         &.visible
+            transform: translateY(0)
+      &__img
+         width: 330px
+         height: 330px
+         margin-bottom: 30px
+         order: -1
+         transform: translateY(40px)
+         &.visible
+            transform: translateY(0)
+         &-person
+            width: 300px
+            bottom: -10px
+      &__title
+         margin-bottom: 20px
+         font-size: 44px
+      &__text
+         margin-bottom: 30px
+      .email-form
+         &__box
+            width: 100%
+
+@media screen and (max-width: $width_xs)
+   .header
+      padding-top: 150px
+      &__tel
+         width: 50px
+         height: 50px
+         padding: 10px
+         font-size: 0
+         border: none
+         &-icon
+            display: block
+         &:hover,
+         &:focus
+            background: transparent
+
+@media screen and (max-width: $width_sm)
+   .header
+      padding-top: 100px
+      padding-bottom: 80px
+      &__top
+         margin-bottom: 60px
+      &__title
+         font-size: 36px
+      &__img
+         width: 100%
+         max-width: 360px
+         height: 360px
+         &-person
+            width: 280px

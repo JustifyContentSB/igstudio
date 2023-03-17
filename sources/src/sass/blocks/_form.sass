@@ -1,0 +1,51 @@
+.form
+   opacity: 0
+   transform: translateY(70px)
+   transition: all .6s ease-out
+   &.visible
+      opacity: 1
+      transform: translateY(0)
+   &__inner
+      display: flex
+      justify-content: center
+   &__field
+      width: 276px
+      padding: 15px 23px
+      margin-right: 9px
+      background: #E4E4E4
+      font-family: 'Helvetica Now Display'
+      font-weight: 400
+      font-size: 14px
+      line-height: 137%
+      border: none
+      &:first-child
+         border-radius: 8px 0px 0px 8px
+      &::placeholder
+         color: #818181
+         font-style: italic
+   &__btn
+      min-width: 116px
+      padding: 18px 20px
+      background: var(--accent)
+      border-radius: 0px 8px 8px 0px
+      text-transform: uppercase
+      color: #000
+      font-weight: 700
+      text-align: center
+      transition: var(--transition)
+      &:hover,
+      &:focus
+         background: var(--hoverColor)
+
+@media screen and (max-width: $width_xs)
+   .form
+      &__inner
+         flex-direction: column
+      &__field
+         width: 100%
+         margin: 0
+         margin-bottom: 10px
+         &:first-child, &:last-child
+            border-radius: 0
+      &__btn
+         border-radius: 0
